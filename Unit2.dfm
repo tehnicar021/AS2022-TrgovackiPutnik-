@@ -25,6 +25,13 @@ object Form2: TForm2
     Height = 15
     Caption = 'Grad'
   end
+  object Label3: TLabel
+    Left = 8
+    Top = 339
+    Width = 30
+    Height = 15
+    Caption = 'Firma'
+  end
   object Button1: TButton
     Left = 59
     Top = 44
@@ -77,7 +84,25 @@ object Form2: TForm2
     Height = 23
     Align = alCustom
     PopupMenu = PopupMenu1
+    ReadOnly = True
     TabOrder = 5
+  end
+  object Edit2: TEdit
+    Left = 59
+    Top = 336
+    Width = 158
+    Height = 23
+    ReadOnly = True
+    TabOrder = 6
+  end
+  object Button3: TButton
+    Left = 280
+    Top = 400
+    Width = 201
+    Height = 33
+    Caption = 'Next'
+    TabOrder = 7
+    OnClick = Button3Click
   end
   object PopupMenu1: TPopupMenu
     Left = 72
@@ -189,10 +214,6 @@ object Form2: TForm2
     object Uzice1: TMenuItem
       Caption = 'Uzice'
       OnClick = Uzice1Click
-    end
-    object Uzice2: TMenuItem
-      Caption = 'Sabac'
-      OnClick = Uzice2Click
     end
     object NoviPazaer1: TMenuItem
       Caption = 'Novi Pazar'
