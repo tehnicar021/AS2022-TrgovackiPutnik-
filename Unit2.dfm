@@ -10,6 +10,8 @@ object Form2: TForm2
   Font.Height = -12
   Font.Name = 'Segoe UI'
   Font.Style = []
+  OldCreateOrder = True
+  PixelsPerInch = 96
   TextHeight = 15
   object Label1: TLabel
     Left = 8
@@ -96,13 +98,22 @@ object Form2: TForm2
     TabOrder = 6
   end
   object Button3: TButton
-    Left = 280
+    Left = 120
     Top = 400
     Width = 201
     Height = 33
     Caption = 'Next'
     TabOrder = 7
     OnClick = Button3Click
+  end
+  object Button7: TButton
+    Left = 568
+    Top = 400
+    Width = 185
+    Height = 33
+    Caption = 'Pregled svih uslova'
+    TabOrder = 8
+    OnClick = Button7Click
   end
   object PopupMenu1: TPopupMenu
     Left = 72
@@ -315,5 +326,31 @@ object Form2: TForm2
       Caption = 'Leposavic'
       OnClick = Leposavic1Click
     end
+  end
+  object FDQuery1: TFDQuery
+    Active = True
+    Connection = FDConnection1
+    SQL.Strings = (
+      
+        'SELECT Firma.ImeFirme, Okrug.ImeOkruga, Mesto.ImeMesta, UslovZaP' +
+        'oslovanje, ProtokKupaca, Procenat, Potraznja, Ostalo'
+      'FROM Uslovi'
+      'INNER JOIN Firma'
+      'ON Firma.ID = Uslovi.ID'
+      'INNER JOIN Mesto'
+      'ON Mesto.ID = Firma.IDMesta'
+      'INNER JOIN Okrug'
+      'ON Mesto.IDOkruga = Okrug.ID')
+    Left = 536
+    Top = 272
+  end
+  object FDConnection1: TFDConnection
+    Params.Strings = (
+      'Database=D:\New folder\projekat.db'
+      'DriverID=sQLite')
+    Connected = True
+    LoginPrompt = False
+    Left = 408
+    Top = 240
   end
 end

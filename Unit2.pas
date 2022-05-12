@@ -1,10 +1,16 @@
-unit Unit2;
+  unit Unit2;
 
 interface
 
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Menus, Vcl.StdCtrls, Unit1;
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Menus, Vcl.StdCtrls, Unit1,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param,
+  FireDAC.Stan.Error, FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf,
+  FireDAC.Stan.Async, FireDAC.DApt, FireDAC.UI.Intf, FireDAC.Stan.Def,
+  FireDAC.Stan.Pool, FireDAC.Phys, FireDAC.Phys.SQLite, FireDAC.Phys.SQLiteDef,
+  FireDAC.Stan.ExprFuncs, FireDAC.Phys.SQLiteWrapper.Stat, FireDAC.VCLUI.Wait,
+  Data.DB, FireDAC.Comp.Client, FireDAC.Comp.DataSet, Unit3;
 
 type
   TForm2 = class(TForm)
@@ -72,6 +78,9 @@ type
     Edit2: TEdit;
     Label3: TLabel;
     Button3: TButton;
+    FDQuery1: TFDQuery;
+    FDConnection1: TFDConnection;
+    Button7: TButton;
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
     procedure Button4Click(Sender: TObject);
@@ -126,6 +135,7 @@ type
     procedure Leposavic1Click(Sender: TObject);
     procedure Sabac1Click(Sender: TObject);
     procedure Button3Click(Sender: TObject);
+    procedure Button7Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -182,8 +192,12 @@ end;
 
 procedure TForm2.Button3Click(Sender: TObject);
 begin
+if Edit1.Text = '' then
+MessageDlg('Invalid input!',mtError, [mbOK], 0)
+else begin
 Form1.Show;
 Form2.Hide;
+end;
 end;
 
 procedure TForm2.Button4Click(Sender: TObject);
@@ -208,6 +222,12 @@ p:TPoint;
 begin
 p := Button6.ClientToScreen(Point(0, Button6.Height));
 PopupMenu5.Popup(p.X,p.Y);
+end;
+
+procedure TForm2.Button7Click(Sender: TObject);
+begin
+  Self.Hide;
+  Form3.Show;
 end;
 
 procedure TForm2.Cukarica1Click(Sender: TObject);

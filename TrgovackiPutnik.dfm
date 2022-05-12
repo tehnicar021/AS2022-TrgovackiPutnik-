@@ -10,6 +10,9 @@ object Login: TLogin
   Font.Height = -12
   Font.Name = 'Segoe UI'
   Font.Style = []
+  OldCreateOrder = True
+  OnCreate = FormCreate
+  PixelsPerInch = 96
   TextHeight = 15
   object Label1: TLabel
     Left = 202
@@ -4935,5 +4938,19 @@ object Login: TLogin
     Caption = 'Cancel'
     TabOrder = 3
     OnClick = Button2Click
+  end
+  object FDConnection: TFDConnection
+    Params.Strings = (
+      'Database=D:\New folder\projekat.db'
+      'DriverID=SQLite')
+    Connected = True
+    LoginPrompt = False
+    Left = 304
+    Top = 224
+  end
+  object queryKorisnici: TFDQuery
+    Connection = FDConnection
+    Left = 384
+    Top = 224
   end
 end

@@ -1,14 +1,24 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <BorlandProject>
 	<Transactions>
-    <Transaction>2022/04/01 15:51:38.000.830,=C:\Users\mihaj\OneDrive\Dokumenti\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>2022/04/01 16:03:35.000.300,=C:\Users\mihaj\OneDrive\Dokumenti\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>2022/04/01 16:03:45.000.127,=C:\Users\mihaj\OneDrive\Dokumenti\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
-    <Transaction>2022/04/01 16:58:43.000.432,C:\Users\mihaj\OneDrive\Dokumenti\Embarcadero\Studio\Projects\AS[TrgovackiPutnik]\TrgovackiPutnik.dfm=C:\Users\mihaj\OneDrive\Dokumenti\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
-    <Transaction>2022/04/01 16:58:43.000.432,C:\Users\mihaj\OneDrive\Dokumenti\Embarcadero\Studio\Projects\AS[TrgovackiPutnik]\TrgovackiPutnik.pas=C:\Users\mihaj\OneDrive\Dokumenti\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>2022/04/01 16:58:54.000.567,C:\Users\mihaj\OneDrive\Dokumenti\Embarcadero\Studio\Projects\AS[TrgovackiPutnik]\Unit2.pas=C:\Users\mihaj\OneDrive\Dokumenti\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
-    <Transaction>2022/04/01 16:58:54.000.567,C:\Users\mihaj\OneDrive\Dokumenti\Embarcadero\Studio\Projects\AS[TrgovackiPutnik]\Unit2.dfm=C:\Users\mihaj\OneDrive\Dokumenti\Embarcadero\Studio\Projects\Unit2.dfm</Transaction>
-    <Transaction>2022/04/01 16:58:56.000.407,C:\Users\mihaj\OneDrive\Dokumenti\Embarcadero\Studio\Projects\AS[TrgovackiPutnik]\Project1.dproj=C:\Users\mihaj\OneDrive\Dokumenti\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
-    <Transaction>2022/04/22 14:16:13.433,=C:\Users\mihaj\OneDrive\Dokumenti\Embarcadero\Studio\Projects\AS[TrgovackiPutnik]\Unit1.pas</Transaction>
-  </Transactions>
+    <Transaction>1899-12-30 00:00:00.000.433,=C:\Users\mihaj\OneDrive\Dokumenti\Embarcadero\Studio\Projects\AS[TrgovackiPutnik]\Unit1.pas</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.407,C:\Users\mihaj\OneDrive\Dokumenti\Embarcadero\Studio\Projects\AS[TrgovackiPutnik]\Project1.dproj=C:\Users\mihaj\OneDrive\Dokumenti\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.432,C:\Users\mihaj\OneDrive\Dokumenti\Embarcadero\Studio\Projects\AS[TrgovackiPutnik]\TrgovackiPutnik.dfm=C:\Users\mihaj\OneDrive\Dokumenti\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.567,C:\Users\mihaj\OneDrive\Dokumenti\Embarcadero\Studio\Projects\AS[TrgovackiPutnik]\Unit2.pas=C:\Users\mihaj\OneDrive\Dokumenti\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.127,=C:\Users\mihaj\OneDrive\Dokumenti\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.830,=C:\Users\mihaj\OneDrive\Dokumenti\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.300,=C:\Users\mihaj\OneDrive\Dokumenti\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.432,C:\Users\mihaj\OneDrive\Dokumenti\Embarcadero\Studio\Projects\AS[TrgovackiPutnik]\TrgovackiPutnik.pas=C:\Users\mihaj\OneDrive\Dokumenti\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.567,C:\Users\mihaj\OneDrive\Dokumenti\Embarcadero\Studio\Projects\AS[TrgovackiPutnik]\Unit2.dfm=C:\Users\mihaj\OneDrive\Dokumenti\Embarcadero\Studio\Projects\Unit2.dfm</Transaction>
+    <Transaction>2022-05-10 18:27:04.000.562,=D:\New folder\Unit3.pas</Transaction>
+  </Transactions>  <ProjectSortOrder AutoSort="0" SortType="0">
+    <File Path="TrgovackiPutnik.pas"/>
+    <File Path="TrgovackiPutnik.dfm"/>
+    <File Path="Unit1.pas"/>
+    <File Path="Unit1.dfm"/>
+    <File Path="Unit2.pas"/>
+    <File Path="Unit2.dfm"/>
+    <File Path="Unit3.pas"/>
+    <File Path="Unit3.dfm"/>
+  </ProjectSortOrder>
 </BorlandProject>
