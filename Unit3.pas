@@ -7,15 +7,14 @@ uses
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Grids, Data.Bind.EngExt,
   Vcl.Bind.DBEngExt, Vcl.Bind.Grid, System.Rtti, System.Bindings.Outputs,
   Vcl.Bind.Editors, Data.Bind.Components, Data.Bind.Grid, Data.Bind.DBScope,
-  Vcl.StdCtrls;
+  Vcl.StdCtrls, Unit4;
 
 type
   TForm3 = class(TForm)
     StringGrid1: TStringGrid;
-    BindSourceDB1: TBindSourceDB;
-    BindingsList1: TBindingsList;
-    LinkGridToDataSourceBindSourceDB1: TLinkGridToDataSource;
     Button1: TButton;
+    BindingsList1: TBindingsList;
+    BindSourceDB1: TBindSourceDB;
     procedure Button1Click(Sender: TObject);
   private
     { Private declarations }

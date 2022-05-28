@@ -62,7 +62,7 @@
   end
   object Edit2: TEdit
     Left = 64
-    Top = 256
+    Top = 320
     Width = 473
     Height = 23
     TabOrder = 4
@@ -70,7 +70,7 @@
   end
   object Button1: TButton
     Left = 48
-    Top = 360
+    Top = 384
     Width = 113
     Height = 49
     Caption = 'Nazad'
@@ -78,11 +78,45 @@
     OnClick = Button1Click
   end
   object Button2: TButton
-    Left = 448
-    Top = 360
+    Left = 264
+    Top = 384
     Width = 121
     Height = 49
     Caption = 'Predaj'
     TabOrder = 6
+    OnClick = Button2Click
+  end
+  object da: TDatePicker
+    Left = 208
+    Top = 220
+    Date = 44709.000000000000000000
+    DateFormat = 'dd/MM/yyyy'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Segoe UI'
+    Font.Style = []
+    TabOrder = 7
+  end
+  object TimePicker1: TTimePicker
+    Left = 208
+    Top = 270
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Segoe UI'
+    Font.Style = []
+    TabOrder = 8
+    Time = 44709.495766412040000000
+    TimeFormat = 'hh:mm'
+  end
+  object Button3: TButton
+    Left = 488
+    Top = 384
+    Width = 121
+    Height = 49
+    Caption = 'Izlaz'
+    TabOrder = 9
+    OnClick = Button3Click
   end
 end

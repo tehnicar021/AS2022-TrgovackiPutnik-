@@ -1,16 +1,10 @@
-﻿[Form2.FDQuery1]
-Coordinates=10,10,114,36
-Visible=False
-
-[StringGrid1]
+﻿[StringGrid1]
 Coordinates=134,10,80,58
 
 []
-Coordinates=80,77,91,36
-
-[BindSourceDB1]
 Coordinates=10,10,106,80
 
-[BindingsList1]
-Coordinates=135,87,91,36
+[Form2.]
+Coordinates=10,10,114,36
+Visible=False
 

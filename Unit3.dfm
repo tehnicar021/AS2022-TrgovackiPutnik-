@@ -14,32 +14,17 @@ object Form3: TForm3
   PixelsPerInch = 96
   TextHeight = 13
   object StringGrid1: TStringGrid
-    Tag = 8
     Left = 8
     Top = 8
     Width = 849
     Height = 345
-    ColCount = 8
+    ColCount = 1
     FixedCols = 0
-    RowCount = 3
+    RowCount = 2
     TabOrder = 0
     ColWidths = (
-      124
-      244
-      124
-      94
-      70
-      64
-      50
-      1804)
+      64)
     ColAligments = (
-      0
-      0
-      0
-      0
-      1
-      1
-      0
       0)
   end
   object Button1: TButton
@@ -51,22 +36,15 @@ object Form3: TForm3
     TabOrder = 1
     OnClick = Button1Click
   end
-  object BindSourceDB1: TBindSourceDB
-    DataSet = Form2.FDQuery1
-    ScopeMappings = <>
-    Left = 800
-    Top = 384
-  end
   object BindingsList1: TBindingsList
     Methods = <>
     OutputConverters = <>
-    Left = 636
-    Top = 365
-    object LinkGridToDataSourceBindSourceDB1: TLinkGridToDataSource
-      Category = 'Quick Bindings'
-      DataSource = BindSourceDB1
-      GridControl = StringGrid1
-      Columns = <>
-    end
+    Left = 588
+    Top = 373
+  end
+  object BindSourceDB1: TBindSourceDB
+    ScopeMappings = <>
+    Left = 672
+    Top = 376
   end
 end
