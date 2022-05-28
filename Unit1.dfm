@@ -28,6 +28,20 @@
     Font.Style = []
     ParentFont = False
   end
+  object Label1: TLabel
+    Left = 96
+    Top = 232
+    Width = 101
+    Height = 15
+    Caption = 'Datum posete fime'
+  end
+  object Label2: TLabel
+    Left = 96
+    Top = 287
+    Width = 99
+    Height = 15
+    Caption = 'Vreme posete fime'
+  end
   object Potražnja: TCheckBox
     Left = 232
     Top = 136
@@ -61,7 +75,7 @@
     TabOrder = 3
   end
   object Edit2: TEdit
-    Left = 64
+    Left = 72
     Top = 320
     Width = 473
     Height = 23

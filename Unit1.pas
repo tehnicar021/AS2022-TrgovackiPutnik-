@@ -20,6 +20,8 @@ type
     da: TDatePicker;
     TimePicker1: TTimePicker;
     Button3: TButton;
+    Label1: TLabel;
+    Label2: TLabel;
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
     procedure Button3Click(Sender: TObject);
@@ -54,5 +56,4 @@ procedure TForm1.Button3Click(Sender: TObject);
 begin
 application.Terminate;
 end;
-
 end.
