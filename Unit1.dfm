@@ -13,6 +13,7 @@
   Font.Style = []
   OldCreateOrder = True
   Position = poDesigned
+  OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 15
   object sdsds: TLabel
@@ -29,53 +30,53 @@
     ParentFont = False
   end
   object Label1: TLabel
-    Left = 96
-    Top = 232
+    Left = 342
+    Top = 113
     Width = 101
     Height = 15
     Caption = 'Datum posete fime'
   end
   object Label2: TLabel
-    Left = 96
-    Top = 287
+    Left = 342
+    Top = 174
     Width = 99
     Height = 15
     Caption = 'Vreme posete fime'
   end
   object Potražnja: TCheckBox
-    Left = 232
-    Top = 136
+    Left = 8
+    Top = 199
     Width = 97
     Height = 17
     Caption = 'Potra'#382'nja'
     TabOrder = 0
   end
   object ProtokKupaca: TCheckBox
-    Left = 232
-    Top = 168
+    Left = 8
+    Top = 232
     Width = 97
     Height = 17
     Caption = 'ProtokKupaca'
     TabOrder = 1
   end
   object Edit1: TEdit
-    Left = 224
-    Top = 191
+    Left = 8
+    Top = 263
     Width = 121
     Height = 23
     TabOrder = 2
     TextHint = 'Procenat'
   end
   object Pozicija: TCheckBox
-    Left = 232
-    Top = 104
+    Left = 8
+    Top = 169
     Width = 97
     Height = 17
     Caption = 'Pozicija'
     TabOrder = 3
   end
   object Edit2: TEdit
-    Left = 72
+    Left = 96
     Top = 320
     Width = 473
     Height = 23
@@ -101,8 +102,8 @@
     OnClick = Button2Click
   end
   object da: TDatePicker
-    Left = 208
-    Top = 220
+    Left = 459
+    Top = 96
     Date = 44709.000000000000000000
     DateFormat = 'dd/MM/yyyy'
     Font.Charset = DEFAULT_CHARSET
@@ -113,8 +114,8 @@
     TabOrder = 7
   end
   object TimePicker1: TTimePicker
-    Left = 208
-    Top = 270
+    Left = 459
+    Top = 159
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -16
@@ -132,5 +133,14 @@
     Caption = 'Izlaz'
     TabOrder = 9
     OnClick = Button3Click
+  end
+  object ComboBox1: TComboBox
+    Left = 8
+    Top = 113
+    Width = 145
+    Height = 23
+    TabOrder = 10
+    TextHint = 'Naziv firme'
+    StyleName = 'ComboBox1'
   end
 end

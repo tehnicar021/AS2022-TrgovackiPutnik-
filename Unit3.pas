@@ -7,14 +7,17 @@ uses
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Grids, Data.Bind.EngExt,
   Vcl.Bind.DBEngExt, Vcl.Bind.Grid, System.Rtti, System.Bindings.Outputs,
   Vcl.Bind.Editors, Data.Bind.Components, Data.Bind.Grid, Data.Bind.DBScope,
-  Vcl.StdCtrls, Unit4;
+  Vcl.StdCtrls, Unit4, Data.Bind.Controls, Vcl.ExtCtrls, Vcl.Buttons,
+  Vcl.Bind.Navigator, Vcl.Bind.ControlList, Vcl.ControlList, Data.DB,
+  Vcl.DBGrids, Vcl.DBCtrls, Data.Win.ADODB, Datasnap.DBClient;
 
 type
   TForm3 = class(TForm)
-    StringGrid1: TStringGrid;
     Button1: TButton;
-    BindingsList1: TBindingsList;
+    StringGrid1: TStringGrid;
     BindSourceDB1: TBindSourceDB;
+    LinkGridToDataSourceBindSourceDB1: TLinkGridToDataSource;
+    BindingsList1: TBindingsList;
     procedure Button1Click(Sender: TObject);
   private
     { Private declarations }

@@ -1,33 +1,12 @@
 object DataModule4: TDataModule4
   OldCreateOrder = True
+  OnCreate = DataModuleCreate
   Height = 540
   Width = 915
-  object FDConnection: TFDConnection
-    Params.Strings = (
-      
-        'Database=C:\Users\mihaj\OneDrive\Radna povr'#353'ina\New folder\Win64' +
-        '\Debug\projekat.db'
-      'DriverID=SQLite')
-    Connected = True
-    LoginPrompt = False
-    Left = 120
-    Top = 80
-  end
   object queryKorisnici: TFDQuery
-    Connection = FDConnection
+    Connection = FDConnection1
     Left = 224
     Top = 80
-  end
-  object BindingsList1: TBindingsList
-    Methods = <>
-    OutputConverters = <>
-    Left = 100
-    Top = 165
-  end
-  object BindSourceDB1: TBindSourceDB
-    ScopeMappings = <>
-    Left = 192
-    Top = 168
   end
   object FDConnection1: TFDConnection
     Params.Strings = (
@@ -41,19 +20,21 @@ object DataModule4: TDataModule4
     Top = 248
   end
   object FDQuery1: TFDQuery
+    Active = True
     Connection = FDConnection1
     SQL.Strings = (
-      
-        'SELECT Firma.ImeFirme, Okrug.ImeOkruga, Mesto.ImeMesta, UslovZaP' +
-        'oslovanje, ProtokKupaca, Procenat, Potraznja, Ostalo'
-      'FROM Uslovi'
-      'INNER JOIN Firma'
-      'ON Firma.ID = Uslovi.ID'
-      'INNER JOIN Mesto'
-      'ON Mesto.ID = Firma.IDMesta'
-      'INNER JOIN Okrug'
-      'ON Mesto.IDOkruga = Okrug.ID')
-    Left = 184
+      'select * from uslovi')
+    Left = 264
     Top = 248
+  end
+  object FDQuery2: TFDQuery
+    Connection = FDConnection1
+    Left = 440
+    Top = 256
+  end
+  object queryInsert: TFDQuery
+    Connection = FDConnection1
+    Left = 576
+    Top = 232
   end
 end

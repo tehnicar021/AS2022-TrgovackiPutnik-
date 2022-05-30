@@ -16,57 +16,18 @@ object Form2: TForm2
   OnShow = Regioni1OnClick
   PixelsPerInch = 96
   TextHeight = 15
-  object Label1: TLabel
-    Left = 8
-    Top = 44
-    Width = 37
-    Height = 15
-    Caption = 'Region'
-  end
-  object Label2: TLabel
-    Left = 8
-    Top = 264
-    Width = 25
-    Height = 15
-    Caption = 'Grad'
-  end
-  object Label3: TLabel
-    Left = 8
-    Top = 339
-    Width = 30
-    Height = 15
-    Caption = 'Firma'
-  end
-  object Label4: TLabel
-    Left = 296
-    Top = 47
-    Width = 25
-    Height = 15
-    Caption = 'Grad'
-  end
-  object Label5: TLabel
-    Left = 568
-    Top = 47
-    Width = 30
-    Height = 15
-    Caption = 'Firma'
-  end
-  object Edit1: TEdit
-    Left = 59
-    Top = 261
-    Width = 121
-    Height = 23
-    Align = alCustom
-    ReadOnly = True
-    TabOrder = 0
-  end
-  object Edit2: TEdit
-    Left = 59
-    Top = 336
-    Width = 158
-    Height = 23
-    ReadOnly = True
-    TabOrder = 1
+  object Label6: TLabel
+    Left = 272
+    Top = 24
+    Width = 298
+    Height = 31
+    Caption = 'Izbor Regiona/Grada/Firme'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -27
+    Font.Name = 'Times New Roman'
+    Font.Style = []
+    ParentFont = False
   end
   object Button3: TButton
     Left = 120
@@ -74,7 +35,7 @@ object Form2: TForm2
     Width = 201
     Height = 33
     Caption = 'Next'
-    TabOrder = 2
+    TabOrder = 0
     OnClick = Button3Click
   end
   object Button7: TButton
@@ -83,30 +44,33 @@ object Form2: TForm2
     Width = 185
     Height = 33
     Caption = 'Pregled svih uslova'
-    TabOrder = 3
+    TabOrder = 1
     OnClick = Button7Click
   end
   object ComboBox1: TComboBox
-    Left = 51
-    Top = 41
+    Left = 35
+    Top = 105
     Width = 145
     Height = 23
     ParentShowHint = False
     ShowHint = False
-    TabOrder = 4
+    TabOrder = 2
+    TextHint = 'Region'
   end
   object ComboBox2: TComboBox
-    Left = 336
-    Top = 41
+    Left = 303
+    Top = 105
     Width = 145
     Height = 23
-    TabOrder = 5
+    TabOrder = 3
+    TextHint = 'Grad'
   end
   object ComboBox3: TComboBox
-    Left = 608
-    Top = 44
+    Left = 584
+    Top = 105
     Width = 145
     Height = 23
-    TabOrder = 6
+    TabOrder = 4
+    TextHint = 'Firma'
   end
 end

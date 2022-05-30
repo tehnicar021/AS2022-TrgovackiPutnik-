@@ -1,0 +1,16 @@
+﻿[FDConnection1]
+Coordinates=235,1,90,33
+
+[queryKorisnici]
+Coordinates=10,10,86,51
+
+[]
+Coordinates=235,105,84,33
+Visible=True
+
+[FDQuery1]
+Coordinates=220,90,63,51
+
+[FDQuery2]
+Coordinates=115,1,63,51
+

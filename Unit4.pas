@@ -11,16 +11,16 @@ uses
   FireDAC.Comp.Client, FireDAC.Stan.Param, FireDAC.DatS, FireDAC.DApt.Intf,
   FireDAC.DApt, FireDAC.Comp.DataSet, Data.Bind.EngExt, Vcl.Bind.DBEngExt,
   System.Rtti, System.Bindings.Outputs, Data.Bind.Components, Data.Bind.Grid,
-  Data.Bind.DBScope;
+  Data.Bind.DBScope, Datasnap.DBClient, Datasnap.Provider;
 
 type
   TDataModule4 = class(TDataModule)
-    FDConnection: TFDConnection;
     queryKorisnici: TFDQuery;
-    BindingsList1: TBindingsList;
-    BindSourceDB1: TBindSourceDB;
     FDConnection1: TFDConnection;
     FDQuery1: TFDQuery;
+    FDQuery2: TFDQuery;
+    queryInsert: TFDQuery;
+    procedure DataModuleCreate(Sender: TObject);
   private
     { Private declarations }
   public
@@ -36,5 +36,22 @@ implementation
 {$R *.dfm}
 
 
+procedure TDataModule4.DataModuleCreate(Sender: TObject);
+begin
+FDConnection1.Connected := False;
+  var path := ExtractFilePath(ParamStr(0)) + '\projekat.db';
+  FDConnection1.Params.Values['Database'] := path;
+  FDConnection1.Connected := True;
+
+
+
+  with FDQuery1 do
+  begin
+    close;
+    sql.clear;
+    sql.text:= 'select * from uslovi';
+    open;
+  end;
+end;
 
 end.

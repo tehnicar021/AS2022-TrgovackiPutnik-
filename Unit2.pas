@@ -14,18 +14,12 @@ uses
 
 type
   TForm2 = class(TForm)
-    Label1: TLabel;
-    Label2: TLabel;
-    Edit1: TEdit;
-    Edit2: TEdit;
-    Label3: TLabel;
     Button3: TButton;
     Button7: TButton;
-    Label4: TLabel;
-    Label5: TLabel;
     ComboBox1: TComboBox;
     ComboBox2: TComboBox;
     ComboBox3: TComboBox;
+    Label6: TLabel;
     procedure Regioni1OnClick(Sender: TObject);
     procedure Button2Click(Sender: TObject);
     procedure Button4Click(Sender: TObject);
@@ -49,17 +43,17 @@ implementation
 procedure TForm2.Button2Click(Sender: TObject);
 begin
 begin
-  with DataModule4.FDQuery1 do
+  with DataModule4.FDQuery2 do
   begin
     Close;
     sql.Clear;
     sql.Text := 'select ImeMesta from Mesto';
     open;
-    DataModule4.FDQuery1.First;
-    while not DataModule4.FDQuery1.Eof do
+    DataModule4.FDQuery2.First;
+    while not DataModule4.FDQuery2.Eof do
     begin
-      ComboBox2.Items.Add(DataModule4.FDQuery1['ImeMesta']);
-      DataModule4.FDQuery1.Next;
+      ComboBox2.Items.Add(DataModule4.FDQuery2['ImeMesta']);
+      DataModule4.FDQuery2.Next;
     end;
 
   end;
@@ -75,17 +69,17 @@ end;
 procedure TForm2.Button4Click(Sender: TObject);
 begin
 begin
-  with DataModule4.FDQuery1 do
+  with DataModule4.FDQuery2 do
   begin
     Close;
     sql.Clear;
     sql.Text := 'select ImeFirme from Firma';
     open;
-    DataModule4.FDQuery1.First;
-    while not DataModule4.FDQuery1.Eof do
+    DataModule4.FDQuery2.First;
+    while not DataModule4.FDQuery2.Eof do
     begin
-      ComboBox3.Items.Add(DataModule4.FDQuery1['ImeFirme']);
-      DataModule4.FDQuery1.Next;
+      ComboBox3.Items.Add(DataModule4.FDQuery2['ImeFirme']);
+      DataModule4.FDQuery2.Next;
     end;
 
   end;
@@ -101,17 +95,17 @@ end;
 
 procedure TForm2.Regioni1OnClick(Sender: TObject);
 begin
-  with DataModule4.FDQuery1 do
+  with DataModule4.FDQuery2 do
   begin
     Close;
     sql.Clear;
     sql.Text := 'select ImeOkruga from Okrug';
     open;
-    DataModule4.FDQuery1.First;
-    while not DataModule4.FDQuery1.Eof do
+    DataModule4.FDQuery2.First;
+    while not DataModule4.FDQuery2.Eof do
     begin
-      ComboBox1.Items.Add(DataModule4.FDQuery1['ImeOkruga']);
-      DataModule4.FDQuery1.Next;
+      ComboBox1.Items.Add(DataModule4.FDQuery2['ImeOkruga']);
+      DataModule4.FDQuery2.Next;
     end;
 
   end;
