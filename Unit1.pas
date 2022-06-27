@@ -52,15 +52,15 @@ procedure TForm1.Button2Click(Sender: TObject);
 begin
 var IDFirme, UslovZaPoslovanje, Procenat, ProtokKupaca, Potraznja, Ostalo, DateTime: String;
 
-IDFirme := '2';
+IDFirme := '4';
 UslovZaPoslovanje := 'true';
-Procenat := '5';
-ProtokKupaca := '20';
+Procenat := '13';
+ProtokKupaca := 'true';
 Potraznja := 'true';
-Ostalo := 'radi li';
-DateTime:= '30/05/2022 20:15';
+Ostalo := 'test test 1 2 3';
+DateTime:= '27/06/2022 15:25';
 DataModule4.queryInsert.ExecSQL('INSERT INTO Uslovi (IDFirme, UslovZaPoslovanje, Procenat, ProtokKupaca, Potraznja, Ostalo, DateTime) VALUES("' + IDFirme.Trim + '", "' + UslovZaPoslovanje.Trim + '", "' + Procenat.Trim + '", "' + ProtokKupaca.Trim + '", "' + Potraznja.Trim + '", "' + Ostalo.Trim + '", "' + DateTime.Trim + '")');
-
+DataModule4.queryInsert.Refresh;
 
 end;
 

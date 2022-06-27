@@ -20,6 +20,9 @@ type
     FDQuery1: TFDQuery;
     FDQuery2: TFDQuery;
     queryInsert: TFDQuery;
+    FDQuery3: TFDQuery;
+    FDQuery4: TFDQuery;
+    FDQuery5: TFDQuery;
     procedure DataModuleCreate(Sender: TObject);
   private
     { Private declarations }
@@ -50,6 +53,13 @@ FDConnection1.Connected := False;
     close;
     sql.clear;
     sql.text:= 'select * from uslovi';
+    open;
+  end;
+with FDQuery5 do
+  begin
+    close;
+    sql.clear;
+    sql.text:= 'select * from uzorak';
     open;
   end;
 end;

@@ -14,13 +14,11 @@ object DataModule4: TDataModule4
         'Database=C:\Users\mihaj\OneDrive\Radna povr'#353'ina\New folder\Win64' +
         '\Debug\projekat.db'
       'DriverID=SQLite')
-    Connected = True
     LoginPrompt = False
     Left = 96
     Top = 248
   end
   object FDQuery1: TFDQuery
-    Active = True
     Connection = FDConnection1
     SQL.Strings = (
       'select * from uslovi')
@@ -29,6 +27,10 @@ object DataModule4: TDataModule4
   end
   object FDQuery2: TFDQuery
     Connection = FDConnection1
+    SQL.Strings = (
+      
+        'select Okrug.ID, Mesto.ImeMesta from Mesto INNER JOIN Okrug ON O' +
+        'krug.ID = Mesto.IDOkruga')
     Left = 440
     Top = 256
   end
@@ -36,5 +38,31 @@ object DataModule4: TDataModule4
     Connection = FDConnection1
     Left = 576
     Top = 232
+  end
+  object FDQuery3: TFDQuery
+    Connection = FDConnection1
+    SQL.Strings = (
+      
+        'select Okrug.ID, Okrug.ImeOkruga, Mesto.ImeMesta from Mesto INNE' +
+        'R JOIN Okrug ON Okrug.ID = Mesto.IDOkruga')
+    Left = 544
+    Top = 328
+  end
+  object FDQuery4: TFDQuery
+    Connection = FDConnection1
+    SQL.Strings = (
+      
+        'select Mesto.ID, Firma.ImeFirme, Mesto.ImeMesta from Firma INNER' +
+        ' JOIN Mesto ON Mesto.ID = Firma.IDMesta')
+    Left = 376
+    Top = 392
+  end
+  object FDQuery5: TFDQuery
+    Connection = FDConnection1
+    SQL.Strings = (
+      'select * from uzorak'
+      '')
+    Left = 696
+    Top = 288
   end
 end

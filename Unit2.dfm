@@ -11,8 +11,6 @@ object Form2: TForm2
   Font.Name = 'Segoe UI'
   Font.Style = []
   OldCreateOrder = True
-  OnActivate = Button4Click
-  OnCreate = Button2Click
   OnShow = Regioni1OnClick
   PixelsPerInch = 96
   TextHeight = 15
@@ -30,7 +28,7 @@ object Form2: TForm2
     ParentFont = False
   end
   object Button3: TButton
-    Left = 120
+    Left = 48
     Top = 400
     Width = 201
     Height = 33
@@ -56,6 +54,7 @@ object Form2: TForm2
     ShowHint = False
     TabOrder = 2
     TextHint = 'Region'
+    OnChange = ComboBox1Change
   end
   object ComboBox2: TComboBox
     Left = 303
@@ -64,6 +63,7 @@ object Form2: TForm2
     Height = 23
     TabOrder = 3
     TextHint = 'Grad'
+    OnChange = ComboBox2Change
   end
   object ComboBox3: TComboBox
     Left = 584
@@ -72,5 +72,14 @@ object Form2: TForm2
     Height = 23
     TabOrder = 4
     TextHint = 'Firma'
+  end
+  object Button1: TButton
+    Left = 303
+    Top = 400
+    Width = 209
+    Height = 33
+    Caption = 'Uzorci'
+    TabOrder = 5
+    OnClick = Button1Click
   end
 end

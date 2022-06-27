@@ -14,3 +14,15 @@ Coordinates=220,90,63,51
 [FDQuery2]
 Coordinates=115,1,63,51
 
+[FDQuery4]
+Coordinates=216,160,63,51
+
+[queryInsert]
+Coordinates=36,80,70,51
+
+[FDQuery3]
+Coordinates=115,71,63,51
+
+[FDQuery5]
+Coordinates=147,169,64,105
+
