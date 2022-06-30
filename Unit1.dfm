@@ -1,4 +1,4 @@
-﻿object Form1: TForm1
+object Form1: TForm1
   Left = 0
   Top = 62
   Hint = 'Ostalo'
@@ -43,33 +43,33 @@
     Height = 15
     Caption = 'Vreme posete fime'
   end
-  object Potražnja: TCheckBox
+  object Potraznja1: TCheckBox
     Left = 8
-    Top = 199
+    Top = 216
     Width = 97
     Height = 17
-    Caption = 'Potra'#382'nja'
+    Caption = 'Potraznja'
     TabOrder = 0
   end
-  object ProtokKupaca: TCheckBox
+  object ProtokKupaca1: TCheckBox
     Left = 8
-    Top = 232
+    Top = 248
     Width = 97
     Height = 17
-    Caption = 'ProtokKupaca'
+    Caption = 'Protok kupaca'
     TabOrder = 1
   end
   object Edit1: TEdit
     Left = 8
-    Top = 263
+    Top = 279
     Width = 121
     Height = 23
     TabOrder = 2
     TextHint = 'Procenat'
   end
-  object Pozicija: TCheckBox
+  object Pozicija1: TCheckBox
     Left = 8
-    Top = 169
+    Top = 185
     Width = 97
     Height = 17
     Caption = 'Pozicija'
@@ -142,5 +142,13 @@
     TabOrder = 10
     TextHint = 'Naziv firme'
     StyleName = 'ComboBox1'
+  end
+  object CheckBox1: TCheckBox
+    Left = 8
+    Top = 159
+    Width = 121
+    Height = 17
+    Caption = 'Uslov za poslovanje'
+    TabOrder = 11
   end
 end

@@ -1,4 +1,4 @@
-unit Unit3;
+﻿unit Unit3;
 
 interface
 
@@ -18,7 +18,10 @@ type
     BindSourceDB1: TBindSourceDB;
     LinkGridToDataSourceBindSourceDB1: TLinkGridToDataSource;
     BindingsList1: TBindingsList;
+    Button2: TButton;
+    Edit1: TEdit;
     procedure Button1Click(Sender: TObject);
+    procedure Button2Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -38,6 +41,35 @@ procedure TForm3.Button1Click(Sender: TObject);
 begin
   Self.Hide;
   Form2.Show;
+end;
+
+procedure TForm3.Button2Click(Sender: TObject);
+begin
+begin
+DataModule4.FDQuery1.First;
+  var ind :Integer;
+  TryStrToInt(Edit1.Text, ind);
+
+  while not DataModule4.FDQuery1.Eof do
+  begin
+
+    if DataModule4.FDQuery1['ID'] = ind then
+    begin
+
+      DataModule4.queryInsert.ExecSQL('DELETE FROM Uslovi WHERE ID = ' + IntToStr(ind));
+      DataModule4.FDQuery1.Refresh;
+      ShowMessage('Uspesno izbrisan uslov sa ID-em ' + IntToStr(ind));
+      Edit1.Text := '';
+      exit
+
+    end;
+
+    DataModule4.FDQuery1.Next;
+
+  end;
+
+  ShowMessage('Uneli ste nepostojeći ID!');
+end;
 end;
 
 end.

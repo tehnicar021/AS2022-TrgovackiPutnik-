@@ -22,8 +22,6 @@ type
     Label6: TLabel;
     Button1: TButton;
     procedure Regioni1OnClick(Sender: TObject);
-   // procedure Button2Click(Sender: TObject);
-   // procedure Button4Click(Sender: TObject);
     procedure Button7Click(Sender: TObject);
     procedure Button3Click(Sender: TObject);
     procedure ComboBox1Change(Sender: TObject);
@@ -45,26 +43,6 @@ implementation
 {$R *.dfm}
 
 
-{procedure TForm2.Button2Click(Sender: TObject);
-begin
-begin
-  with DataModule4.FDQuery2 do
-  begin
-    Close;
-    sql.Clear;
-    sql.Text := 'select ImeMesta from Mesto';
-    open;
-    DataModule4.FDQuery2.First;
-    while not DataModule4.FDQuery2.Eof do
-    begin
-      ComboBox2.Items.Add(DataModule4.FDQuery2['ImeMesta']);
-      DataModule4.FDQuery2.Next;
-    end;
-
-  end;
-end;
-end;
-          }
 procedure TForm2.Button1Click(Sender: TObject);
 begin
 Self.Hide;
@@ -73,30 +51,17 @@ end;
 
 procedure TForm2.Button3Click(Sender: TObject);
 begin
+          if(ComboBox1.Text = '') or (ComboBox2.Text= '') or (ComboBox3.Text = '') then
+          begin
+            ShowMessage('Greska: Unesite tacne informacije');
+            Exit
+          end;
+
  Self.Hide;
   Form1.Show;
 end;
 
-{procedure TForm2.Button4Click(Sender: TObject);
-begin
- with DataModule4.FDQuery4 do
-  begin
-    Close;
-    sql.Clear;
-    sql.Text := 'select Mesto.ID, Firma.ImeFirme, Mesto.ImeMesta from Firma INNER JOIN Mesto ON Mesto.ID = Firma.IDMesta';
-    open;
-DataModule4.FDQuery4.First;
-      while not DataModule4.FDQuery3.Eof do
-      begin
-      if DataModule4.FDQuery4['ImeMesta']=ComboBox2.Text then
-        begin
-          ComboBox3.items.Add(DataModule4.FDQuery4['ImeFirme']);
-        end;
-        DataModule4.FDQuery4.Next;
-      end;
-end;
-end;
-       }
+
 procedure TForm2.Button7Click(Sender: TObject);
 begin
  Self.Hide;

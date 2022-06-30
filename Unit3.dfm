@@ -51,6 +51,23 @@ object Form3: TForm3
       0
       0)
   end
+  object Button2: TButton
+    Left = 696
+    Top = 312
+    Width = 89
+    Height = 33
+    Caption = 'Izbrisi'
+    TabOrder = 2
+    OnClick = Button2Click
+  end
+  object Edit1: TEdit
+    Left = 680
+    Top = 368
+    Width = 121
+    Height = 21
+    TabOrder = 3
+    TextHint = 'ID'
+  end
   object BindSourceDB1: TBindSourceDB
     DataSet = DataModule4.FDQuery1
     ScopeMappings = <>

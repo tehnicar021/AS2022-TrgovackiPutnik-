@@ -5,14 +5,14 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.WinXPickers,
-  Vcl.ComCtrls, Unit4;
+  Vcl.ComCtrls, Unit4, Unit3;
 
 type
   TForm1 = class(TForm)
-    Potražnja: TCheckBox;
-    ProtokKupaca: TCheckBox;
+    Potraznja1: TCheckBox;
+    ProtokKupaca1: TCheckBox;
     Edit1: TEdit;
-    Pozicija: TCheckBox;
+    Pozicija1: TCheckBox;
     Edit2: TEdit;
     sdsds: TLabel;
     Button1: TButton;
@@ -23,6 +23,7 @@ type
     Label1: TLabel;
     Label2: TLabel;
     ComboBox1: TComboBox;
+    CheckBox1: TCheckBox;
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
     procedure Button3Click(Sender: TObject);
@@ -30,16 +31,14 @@ type
   private
     { Private declarations }
   public
-    { Public declarations }
-  end;
 
-var
+
+  end;
+  var
   Form1: TForm1;
 
 implementation
-
 uses Unit2;
-
 {$R *.dfm}
 
 procedure TForm1.Button1Click(Sender: TObject);
@@ -50,18 +49,32 @@ end;
 
 procedure TForm1.Button2Click(Sender: TObject);
 begin
-var IDFirme, UslovZaPoslovanje, Procenat, ProtokKupaca, Potraznja, Ostalo, DateTime: String;
 
-IDFirme := '4';
-UslovZaPoslovanje := 'true';
-Procenat := '13';
-ProtokKupaca := 'true';
-Potraznja := 'true';
-Ostalo := 'test test 1 2 3';
-DateTime:= '27/06/2022 15:25';
-DataModule4.queryInsert.ExecSQL('INSERT INTO Uslovi (IDFirme, UslovZaPoslovanje, Procenat, ProtokKupaca, Potraznja, Ostalo, DateTime) VALUES("' + IDFirme.Trim + '", "' + UslovZaPoslovanje.Trim + '", "' + Procenat.Trim + '", "' + ProtokKupaca.Trim + '", "' + Potraznja.Trim + '", "' + Ostalo.Trim + '", "' + DateTime.Trim + '")');
-DataModule4.queryInsert.Refresh;
+var UslovZaPoslovanje := BoolToStr(CheckBox1.Checked);
+var Procenat := Edit1.Text;
+var ProtokKupaca := BoolToStr(ProtokKupaca1.Checked);
+var Potraznja := BoolToStr(Potraznja1.Checked);
+var Pozicija := BoolToStr(Pozicija1.Checked);
+var Ostalo := Edit2.Text;
+var DateTime:= DateToStr(da.Date) + ' ' + TimeToStr(TimePicker1.Time);
+var ImeFirme := ComboBox1.Text;
+var IDFirme :String;
+DataModule4.FDQuery6.First;
+    while not DataModule4.FDQuery6.Eof do
+    begin
+          if(DataModule4.FDQuery6['ImeFirme']= ImeFirme)     then
+          begin
+            IDFirme:= DataModule4.FDQuery6['ID'];
+          end;
+          DataModule4.FDQuery6.Next;
+    end;
 
+
+DataModule4.queryInsert.ExecSQL('INSERT INTO Uslovi (IDFirme, UslovZaPoslovanje, Procenat, ProtokKupaca, Potraznja, Ostalo, DateTime) VALUES("' + IDFirme + '", "' + UslovZaPoslovanje + '", "' + Procenat + '", "' + ProtokKupaca + '", "' + Potraznja + '", "' + Ostalo + '", "' + DateTime + '")');
+DataModule4.FDQuery6.Refresh;
+ShowMessage('Uspesno unet uslov');
+Self.Hide;
+Form3.Show;
 end;
 
 
@@ -71,22 +84,13 @@ application.Terminate;
 end;
 procedure TForm1.FormCreate(Sender: TObject);
 begin
-begin
-  with DataModule4.FDQuery2 do
-  begin
-    Close;
-    sql.Clear;
-    sql.Text := 'select ImeFirme from Firma';
-    open;
-    DataModule4.FDQuery2.First;
-    while not DataModule4.FDQuery2.Eof do
+    DataModule4.FDQuery6.First;
+    while not DataModule4.FDQuery6.Eof do
     begin
-      ComboBox1.Items.Add(DataModule4.FDQuery2['ImeFirme']);
-      DataModule4.FDQuery2.Next;
+      ComboBox1.Items.Add(DataModule4.FDQuery6['ImeFirme']);
+      DataModule4.FDQuery6.Next;
     end;
 
   end;
-end;
-end;
 
 end.

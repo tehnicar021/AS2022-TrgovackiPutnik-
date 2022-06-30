@@ -1,4 +1,4 @@
-unit Unit5;
+﻿unit Unit5;
 
 interface
 
@@ -22,8 +22,11 @@ type
     Edit3: TEdit;
     Button2: TButton;
     Edit4: TEdit;
+    Button3: TButton;
+    Edit5: TEdit;
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
+    procedure Button3Click(Sender: TObject);
 
   private
     { Private declarations }
@@ -65,6 +68,33 @@ procedure TForm5.Button2Click(Sender: TObject);
 begin
 Self.Hide;
 Form2.Show;
+end;
+
+procedure TForm5.Button3Click(Sender: TObject);
+begin
+DataModule4.FDQuery5.First;
+  var ind :Integer;
+  TryStrToInt(Edit5.Text, ind);
+
+  while not DataModule4.FDQuery5.Eof do
+  begin
+
+    if DataModule4.FDQuery5['ID'] = ind then
+    begin
+
+      DataModule4.queryInsert.ExecSQL('DELETE FROM Uzorak WHERE ID = ' + IntToStr(ind));
+      DataModule4.FDQuery5.Refresh;
+      ShowMessage('Uspesno izbrisan uzorak sa ID-em ' + IntToStr(ind));
+      Edit1.Text := '';
+      exit
+
+    end;
+
+    DataModule4.FDQuery5.Next;
+
+  end;
+
+  ShowMessage('Uneli ste nepostojeći ID!');
 end;
 
 end.

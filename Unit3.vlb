@@ -26,11 +26,23 @@ Coordinates=470,80,130,33
 Visible=False
 
 [DataModule4.FDQuery2]
-Coordinates=100,220,130,51
+Coordinates=100,220,130,87
 
 [BindSourceDB1]
 Coordinates=470,80,117,69
 
 [BindingsList1]
 Coordinates=167,71,82,33
+
+[DataModule4.queryInsert]
+Coordinates=177,1,137,51
+
+[DataModule4.FDQuery3]
+Coordinates=314,145,130,51
+
+[DataModule4.FDQuery4]
+Coordinates=155,145,130,51
+
+[DataModule4.FDQuery5]
+Coordinates=374,1,130,51
 

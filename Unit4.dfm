@@ -13,6 +13,7 @@ object DataModule4: TDataModule4
       
         'Database=C:\Users\mihaj\OneDrive\Radna povr'#353'ina\New folder\Win64' +
         '\Debug\projekat.db'
+      'LockingMode=Normal'
       'DriverID=SQLite')
     LoginPrompt = False
     Left = 96
@@ -64,5 +65,12 @@ object DataModule4: TDataModule4
       '')
     Left = 696
     Top = 288
+  end
+  object FDQuery6: TFDQuery
+    Connection = FDConnection1
+    SQL.Strings = (
+      'select ImeFirme, ID from firma')
+    Left = 464
+    Top = 72
   end
 end

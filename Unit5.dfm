@@ -27,9 +27,9 @@ object Form5: TForm5
     ParentFont = False
   end
   object StringGrid1: TStringGrid
-    Left = 456
-    Top = 64
-    Width = 497
+    Left = 384
+    Top = 82
+    Width = 569
     Height = 255
     ColCount = 1
     FixedCols = 0
@@ -57,7 +57,7 @@ object Form5: TForm5
     TextHint = 'Cena'
   end
   object Button1: TButton
-    Left = 48
+    Left = 24
     Top = 304
     Width = 97
     Height = 33
@@ -74,7 +74,7 @@ object Form5: TForm5
     TextHint = 'ID Firme'
   end
   object Button2: TButton
-    Left = 224
+    Left = 168
     Top = 304
     Width = 97
     Height = 33
@@ -89,6 +89,24 @@ object Form5: TForm5
     Height = 21
     TabOrder = 6
     TextHint = 'Kolicina'
+  end
+  object Button3: TButton
+    Left = 256
+    Top = 202
+    Width = 90
+    Height = 33
+    Caption = 'Izbrisi'
+    TabOrder = 7
+    OnClick = Button3Click
+  end
+  object Edit5: TEdit
+    Left = 240
+    Top = 160
+    Width = 129
+    Height = 21
+    NumbersOnly = True
+    TabOrder = 8
+    TextHint = 'ID'
   end
   object BindSourceDB1: TBindSourceDB
     DataSet = DataModule4.FDQuery5
