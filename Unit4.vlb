@@ -24,5 +24,14 @@ Coordinates=36,80,70,51
 Coordinates=115,71,63,51
 
 [FDQuery5]
-Coordinates=147,169,64,105
+Coordinates=147,169,63,51
+
+[FDQuery6]
+Coordinates=78,169,63,87
+
+[FDQuery7]
+Coordinates=216,1,63,51
+
+[FDQuery8]
+Coordinates=363,1,63,51
 

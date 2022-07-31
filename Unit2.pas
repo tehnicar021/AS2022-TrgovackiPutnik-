@@ -10,7 +10,7 @@ uses
   FireDAC.Stan.Async, FireDAC.DApt, FireDAC.UI.Intf, FireDAC.Stan.Def,
   FireDAC.Stan.Pool, FireDAC.Phys, FireDAC.Phys.SQLite, FireDAC.Phys.SQLiteDef,
   FireDAC.Stan.ExprFuncs, FireDAC.Phys.SQLiteWrapper.Stat, FireDAC.VCLUI.Wait,
-  Data.DB, FireDAC.Comp.Client, FireDAC.Comp.DataSet, Unit3, Vcl.DBCtrls, Unit4,Unit5;
+  Data.DB, FireDAC.Comp.Client, FireDAC.Comp.DataSet, Unit3, Vcl.DBCtrls, Unit4,Unit5, Unit6, Unit7;
 
 type
   TForm2 = class(TForm)
@@ -21,12 +21,16 @@ type
     ComboBox3: TComboBox;
     Label6: TLabel;
     Button1: TButton;
+    Button2: TButton;
+    Button4: TButton;
     procedure Regioni1OnClick(Sender: TObject);
     procedure Button7Click(Sender: TObject);
     procedure Button3Click(Sender: TObject);
     procedure ComboBox1Change(Sender: TObject);
     procedure ComboBox2Change(Sender: TObject);
     procedure Button1Click(Sender: TObject);
+    procedure Button4Click(Sender: TObject);
+    procedure Button2Click(Sender: TObject);
 
 
   private
@@ -49,6 +53,12 @@ Self.Hide;
 Form5.Show;
 end;
 
+procedure TForm2.Button2Click(Sender: TObject);
+begin
+Self.Hide;
+Form7.Show;
+end;
+
 procedure TForm2.Button3Click(Sender: TObject);
 begin
           if(ComboBox1.Text = '') or (ComboBox2.Text= '') or (ComboBox3.Text = '') then
@@ -61,6 +71,12 @@ begin
   Form1.Show;
 end;
 
+
+procedure TForm2.Button4Click(Sender: TObject);
+begin
+Self.Hide;
+Form6.Show;
+end;
 
 procedure TForm2.Button7Click(Sender: TObject);
 begin

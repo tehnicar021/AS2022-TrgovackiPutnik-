@@ -15,6 +15,7 @@ object DataModule4: TDataModule4
         '\Debug\projekat.db'
       'LockingMode=Normal'
       'DriverID=SQLite')
+    Connected = True
     LoginPrompt = False
     Left = 96
     Top = 248
@@ -67,10 +68,27 @@ object DataModule4: TDataModule4
     Top = 288
   end
   object FDQuery6: TFDQuery
+    Active = True
     Connection = FDConnection1
     SQL.Strings = (
       'select ImeFirme, ID from firma')
     Left = 464
     Top = 72
+  end
+  object FDQuery7: TFDQuery
+    Connection = FDConnection1
+    SQL.Strings = (
+      
+        'select IDMesta, ImeFirme, ZiroRacun, Adresa, Telefon, Fax, Email' +
+        ' from firma')
+    Left = 592
+    Top = 408
+  end
+  object FDQuery8: TFDQuery
+    Connection = FDConnection1
+    SQL.Strings = (
+      'select idfirme,datetime, ostalo from uslovi')
+    Left = 672
+    Top = 384
   end
 end

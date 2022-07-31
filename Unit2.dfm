@@ -28,8 +28,8 @@ object Form2: TForm2
     ParentFont = False
   end
   object Button3: TButton
-    Left = 48
-    Top = 400
+    Left = 328
+    Top = 408
     Width = 201
     Height = 33
     Caption = 'Next'
@@ -37,8 +37,8 @@ object Form2: TForm2
     OnClick = Button3Click
   end
   object Button7: TButton
-    Left = 568
-    Top = 400
+    Left = 624
+    Top = 264
     Width = 185
     Height = 33
     Caption = 'Pregled svih uslova'
@@ -74,12 +74,30 @@ object Form2: TForm2
     TextHint = 'Firma'
   end
   object Button1: TButton
-    Left = 303
-    Top = 400
+    Left = 8
+    Top = 256
     Width = 209
     Height = 33
     Caption = 'Uzorci'
     TabOrder = 5
     OnClick = Button1Click
+  end
+  object Button2: TButton
+    Left = 624
+    Top = 320
+    Width = 185
+    Height = 33
+    Caption = 'Izvestaji'
+    TabOrder = 6
+    OnClick = Button2Click
+  end
+  object Button4: TButton
+    Left = 8
+    Top = 312
+    Width = 209
+    Height = 33
+    Caption = 'Pregled firmi'
+    TabOrder = 7
+    OnClick = Button4Click
   end
 end

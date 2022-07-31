@@ -24,6 +24,8 @@ type
     FDQuery4: TFDQuery;
     FDQuery5: TFDQuery;
     FDQuery6: TFDQuery;
+    FDQuery7: TFDQuery;
+    FDQuery8: TFDQuery;
     procedure DataModuleCreate(Sender: TObject);
   private
     { Private declarations }
@@ -68,6 +70,22 @@ with FDQuery6 do
     close;
     sql.clear;
     sql.text:= 'select ImeFirme, ID from Firma';
+    open;
+  end;
+
+  with FDQuery7 do
+  begin
+    close;
+    sql.clear;
+    sql.text:= 'select IDMesta, ImeFirme, ZiroRacun, Adresa, Telefon, Fax, Email from Firma';
+    open;
+  end;
+
+  with FDQuery8 do
+  begin
+    close;
+    sql.clear;
+    sql.text:= 'select IDFirme, DateTime, Ostalo from Uslovi';
     open;
   end;
 end;

@@ -3,8 +3,8 @@ object Form1: TForm1
   Top = 62
   Hint = 'Ostalo'
   Caption = 'Form1'
-  ClientHeight = 441
-  ClientWidth = 624
+  ClientHeight = 584
+  ClientWidth = 829
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -17,7 +17,7 @@ object Form1: TForm1
   PixelsPerInch = 96
   TextHeight = 15
   object sdsds: TLabel
-    Left = 168
+    Left = 256
     Top = 24
     Width = 228
     Height = 34
@@ -30,15 +30,15 @@ object Form1: TForm1
     ParentFont = False
   end
   object Label1: TLabel
-    Left = 342
-    Top = 113
+    Left = 454
+    Top = 116
     Width = 101
     Height = 15
     Caption = 'Datum posete fime'
   end
   object Label2: TLabel
-    Left = 342
-    Top = 174
+    Left = 454
+    Top = 176
     Width = 99
     Height = 15
     Caption = 'Vreme posete fime'
@@ -61,7 +61,7 @@ object Form1: TForm1
   end
   object Edit1: TEdit
     Left = 8
-    Top = 279
+    Top = 287
     Width = 121
     Height = 23
     TabOrder = 2
@@ -76,16 +76,16 @@ object Form1: TForm1
     TabOrder = 3
   end
   object Edit2: TEdit
-    Left = 96
-    Top = 320
+    Left = 128
+    Top = 440
     Width = 473
     Height = 23
     TabOrder = 4
     TextHint = 'Ostalo'
   end
   object Button1: TButton
-    Left = 48
-    Top = 384
+    Left = 8
+    Top = 512
     Width = 113
     Height = 49
     Caption = 'Nazad'
@@ -94,7 +94,7 @@ object Form1: TForm1
   end
   object Button2: TButton
     Left = 264
-    Top = 384
+    Top = 512
     Width = 121
     Height = 49
     Caption = 'Predaj'
@@ -102,7 +102,7 @@ object Form1: TForm1
     OnClick = Button2Click
   end
   object da: TDatePicker
-    Left = 459
+    Left = 579
     Top = 96
     Date = 44709.000000000000000000
     DateFormat = 'dd/MM/yyyy'
@@ -114,7 +114,7 @@ object Form1: TForm1
     TabOrder = 7
   end
   object TimePicker1: TTimePicker
-    Left = 459
+    Left = 579
     Top = 159
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
@@ -126,8 +126,8 @@ object Form1: TForm1
     TimeFormat = 'hh:mm'
   end
   object Button3: TButton
-    Left = 488
-    Top = 384
+    Left = 504
+    Top = 512
     Width = 121
     Height = 49
     Caption = 'Izlaz'
@@ -150,5 +150,15 @@ object Form1: TForm1
     Height = 17
     Caption = 'Uslov za poslovanje'
     TabOrder = 11
+  end
+  object Edit3: TEdit
+    Left = 8
+    Top = 344
+    Width = 121
+    Height = 23
+    NumbersOnly = True
+    TabOrder = 12
+    TextHint = 'Ocena firme'
+    OnChange = Edit3Change
   end
 end

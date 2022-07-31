@@ -24,10 +24,12 @@ type
     Label2: TLabel;
     ComboBox1: TComboBox;
     CheckBox1: TCheckBox;
+    Edit3: TEdit;
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
     procedure Button3Click(Sender: TObject);
     procedure FormCreate(Sender: TObject);
+    procedure Edit3Change(Sender: TObject);
   private
     { Private declarations }
   public
@@ -52,6 +54,7 @@ begin
 
 var UslovZaPoslovanje := BoolToStr(CheckBox1.Checked);
 var Procenat := Edit1.Text;
+var Recenzija := Edit3.Text;
 var ProtokKupaca := BoolToStr(ProtokKupaca1.Checked);
 var Potraznja := BoolToStr(Potraznja1.Checked);
 var Pozicija := BoolToStr(Pozicija1.Checked);
@@ -70,7 +73,7 @@ DataModule4.FDQuery6.First;
     end;
 
 
-DataModule4.queryInsert.ExecSQL('INSERT INTO Uslovi (IDFirme, UslovZaPoslovanje, Procenat, ProtokKupaca, Potraznja, Ostalo, DateTime) VALUES("' + IDFirme + '", "' + UslovZaPoslovanje + '", "' + Procenat + '", "' + ProtokKupaca + '", "' + Potraznja + '", "' + Ostalo + '", "' + DateTime + '")');
+DataModule4.queryInsert.ExecSQL('INSERT INTO Uslovi (IDFirme, UslovZaPoslovanje, Procenat, Recenzija, ProtokKupaca, Potraznja, Pozicija, Ostalo, DateTime) VALUES("' + IDFirme + '", "' + UslovZaPoslovanje + '", "' + Procenat + '", "' + Recenzija + '", "' + ProtokKupaca + '", "' + Potraznja + '", "' + Pozicija + '", "' + Ostalo + '", "' + DateTime + '")');
 DataModule4.FDQuery6.Refresh;
 ShowMessage('Uspesno unet uslov');
 Self.Hide;
@@ -82,6 +85,11 @@ procedure TForm1.Button3Click(Sender: TObject);
 begin
 application.Terminate;
 end;
+procedure TForm1.Edit3Change(Sender: TObject);
+begin
+if(Edit3.Text > '5') then ShowMessage('Uneta ocena mora biti manja ili jednaka 5');
+end;
+
 procedure TForm1.FormCreate(Sender: TObject);
 begin
     DataModule4.FDQuery6.First;
