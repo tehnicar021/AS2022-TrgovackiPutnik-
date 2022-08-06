@@ -41,13 +41,40 @@ object Form6: TForm6
       1)
   end
   object Button1: TButton
-    Left = 425
+    Left = 753
     Top = 456
     Width = 113
     Height = 33
     Caption = 'Nazad'
     TabOrder = 1
     OnClick = Button1Click
+  end
+  object Button2: TButton
+    Left = 511
+    Top = 456
+    Width = 105
+    Height = 33
+    Caption = 'Izbrisi komitenta'
+    TabOrder = 2
+    OnClick = Button2Click
+  end
+  object Edit1: TEdit
+    Left = 384
+    Top = 462
+    Width = 121
+    Height = 21
+    NumbersOnly = True
+    TabOrder = 3
+    TextHint = 'ID'
+  end
+  object Button3: TButton
+    Left = 32
+    Top = 456
+    Width = 105
+    Height = 33
+    Caption = 'Dodaj komitenta'
+    TabOrder = 4
+    OnClick = Button3Click
   end
   object BindSourceDB1: TBindSourceDB
     DataSet = DataModule4.FDQuery7

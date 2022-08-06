@@ -77,7 +77,7 @@ with FDQuery6 do
   begin
     close;
     sql.clear;
-    sql.text:= 'select IDMesta, ImeFirme, ZiroRacun, Adresa, Telefon, Fax, Email from Firma';
+    sql.text:= 'select * from Firma';
     open;
   end;
 

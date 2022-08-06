@@ -76,11 +76,10 @@ object DataModule4: TDataModule4
     Top = 72
   end
   object FDQuery7: TFDQuery
+    Active = True
     Connection = FDConnection1
     SQL.Strings = (
-      
-        'select IDMesta, ImeFirme, ZiroRacun, Adresa, Telefon, Fax, Email' +
-        ' from firma')
+      'select * from Firma')
     Left = 592
     Top = 408
   end
