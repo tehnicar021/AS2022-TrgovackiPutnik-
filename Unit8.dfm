@@ -91,4 +91,13 @@ object Form8: TForm8
     TabOrder = 7
     OnClick = Button1Click
   end
+  object Button2: TButton
+    Left = 448
+    Top = 400
+    Width = 105
+    Height = 33
+    Caption = 'Nazad'
+    TabOrder = 8
+    OnClick = Button2Click
+  end
 end

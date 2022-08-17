@@ -17,7 +17,9 @@ type
     Edit6: TEdit;
     Edit7: TEdit;
     Button1: TButton;
+    Button2: TButton;
     procedure Button1Click(Sender: TObject);
+    procedure Button2Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -28,7 +30,7 @@ var
   Form8: TForm8;
 
 implementation
-
+uses Unit2;
 {$R *.dfm}
 
 procedure TForm8.Button1Click(Sender: TObject);
@@ -54,6 +56,12 @@ DataModule4.FDQuery7.ExecSQL('INSERT INTO Firma(IDMesta, ImeFirme, Adresa, Email
   ShowMessage('Komitent uspesno dodat');
     DataModule4.FDQuery7.Refresh;
 
+end;
+
+procedure TForm8.Button2Click(Sender: TObject);
+begin
+Form2.Show;
+Self.Hide;
 end;
 
 end.
